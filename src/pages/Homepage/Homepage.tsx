@@ -1,24 +1,35 @@
 
-import { MainLayout } from '../../layouts';
-import { AIFeaturesShowcase, PricingPlans } from './sections';
+import React from 'react';
+import MainLayout from '../../layouts/MainLayout';
+import {
+  AIFeaturesShowcase,
+  CustomerSuccessStories,
+  RoiCalculator,
+  IntegrationEcosystem
+} from './sections';
 
-/**
- * Homepage Component
- * 
- * The main landing page of the application that showcases the product
- * features, benefits, and pricing plans.
- */
-const Homepage = () => {
+const Homepage: React.FC = () => {
   return (
     <MainLayout>
-      {/* Hero section would go here */}
-      <AIFeaturesShowcase />
-      {/* Other sections would go here */}
-      <PricingPlans />
-      {/* More sections would go here */}
+      <div className="min-h-screen">
+        {/* Hero section would go here */}
+        
+        {/* Features showcase */}
+        <AIFeaturesShowcase />
+        
+        {/* Integration ecosystem */}
+        <IntegrationEcosystem />
+        
+        {/* Success stories */}
+        <CustomerSuccessStories />
+        
+        {/* ROI calculator */}
+        <RoiCalculator />
+        
+        {/* Other sections */}
+      </div>
     </MainLayout>
   );
 };
 
 export default Homepage;
-  
