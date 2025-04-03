@@ -1,24 +1,23 @@
 
+import { MainLayout } from '../../layouts/MainLayout';
 import { 
   HeroSection, 
   AIFeaturesShowcase, 
-  LiveGptDemo, 
-  GPTModelComparison,
-  RoiCalculator
-} from "./sections";
-import MainLayout from "@/layouts/MainLayout";
+  GPTModelComparison, 
+  LiveGptDemo,
+  CustomerSuccessStories
+} from './sections';
 
 const Homepage = () => {
   return (
     <MainLayout>
       <HeroSection />
       <AIFeaturesShowcase />
-      <LiveGptDemo />
       <GPTModelComparison />
-      <RoiCalculator />
+      <LiveGptDemo />
+      <CustomerSuccessStories />
     </MainLayout>
   );
 };
 
 export default Homepage;
-  
