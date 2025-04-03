@@ -1,35 +1,17 @@
 
-import React from 'react';
-import MainLayout from '../../layouts/MainLayout';
-import {
-  AIFeaturesShowcase,
-  CustomerSuccessStories,
-  RoiCalculator,
-  IntegrationEcosystem
-} from './sections';
+import { HeroSection, CustomerSuccessStories, RoiCalculator, CallToActionSignup } from './sections';
 
-const Homepage: React.FC = () => {
+const Homepage = () => {
   return (
-    <MainLayout>
-      <div className="min-h-screen">
-        {/* Hero section would go here */}
-        
-        {/* Features showcase */}
-        <AIFeaturesShowcase />
-        
-        {/* Integration ecosystem */}
-        <IntegrationEcosystem />
-        
-        {/* Success stories */}
-        <CustomerSuccessStories />
-        
-        {/* ROI calculator */}
-        <RoiCalculator />
-        
-        {/* Other sections */}
-      </div>
-    </MainLayout>
+    <main>
+      <HeroSection />
+      <CustomerSuccessStories />
+      <RoiCalculator />
+      {/* Other sections would go here */}
+      <CallToActionSignup />
+    </main>
   );
 };
 
 export default Homepage;
+  
