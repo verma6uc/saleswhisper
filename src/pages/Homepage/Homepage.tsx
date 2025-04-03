@@ -1,23 +1,24 @@
 
-import { MainLayout } from '../../layouts/MainLayout';
-import { 
-  HeroSection, 
-  AIFeaturesShowcase, 
-  GPTModelComparison, 
-  LiveGptDemo,
-  CustomerSuccessStories
-} from './sections';
+import { MainLayout } from '../../layouts';
+import { AIFeaturesShowcase, PricingPlans } from './sections';
 
+/**
+ * Homepage Component
+ * 
+ * The main landing page of the application that showcases the product
+ * features, benefits, and pricing plans.
+ */
 const Homepage = () => {
   return (
     <MainLayout>
-      <HeroSection />
+      {/* Hero section would go here */}
       <AIFeaturesShowcase />
-      <GPTModelComparison />
-      <LiveGptDemo />
-      <CustomerSuccessStories />
+      {/* Other sections would go here */}
+      <PricingPlans />
+      {/* More sections would go here */}
     </MainLayout>
   );
 };
 
 export default Homepage;
+  
