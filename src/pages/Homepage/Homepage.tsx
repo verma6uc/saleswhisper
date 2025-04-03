@@ -1,17 +1,21 @@
 
-import { Suspense } from 'react';
-import MainLayout from '../../layouts/MainLayout';
-import HeroSection from './sections/HeroSection/HeroSection';
-import AIFeaturesShowcase from './sections/AIFeaturesShowcase/AIFeaturesShowcase';
+import { 
+  HeroSection, 
+  AIFeaturesShowcase, 
+  LiveGptDemo, 
+  GPTModelComparison,
+  RoiCalculator
+} from "./sections";
+import MainLayout from "@/layouts/MainLayout";
 
 const Homepage = () => {
   return (
     <MainLayout>
       <HeroSection />
-      <Suspense fallback={<div className="h-96 w-full bg-gray-100"></div>}>
-        <AIFeaturesShowcase />
-      </Suspense>
-      {/* Add other sections here as they are created */}
+      <AIFeaturesShowcase />
+      <LiveGptDemo />
+      <GPTModelComparison />
+      <RoiCalculator />
     </MainLayout>
   );
 };
