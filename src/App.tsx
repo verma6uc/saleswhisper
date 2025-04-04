@@ -1,13 +1,14 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
+import Homepage from './pages/Homepage/Homepage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<div className="py-20 text-center"><h1 className="text-3xl font-bold">Homepage</h1></div>} />
+          <Route index element={<Homepage />} />
           <Route path="ai-coaching" element={<div className="py-20 text-center"><h1 className="text-3xl font-bold">AI Coaching</h1></div>} />
           <Route path="conversation-analytics" element={<div className="py-20 text-center"><h1 className="text-3xl font-bold">Conversation Analytics</h1></div>} />
           <Route path="platform" element={<div className="py-20 text-center"><h1 className="text-3xl font-bold">Platform</h1></div>} />
