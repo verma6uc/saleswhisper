@@ -38,7 +38,7 @@ const Homepage = () => {
       <GPTModelComparison />
       
       {/* ROI calculator to demonstrate value */}
-      <RoiCalculator />
+      // <RoiCalculator />
       
       {/* Success stories and testimonials */}
       <CustomerSuccessStories />

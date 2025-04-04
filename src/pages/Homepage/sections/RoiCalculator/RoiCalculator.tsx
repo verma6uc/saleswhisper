@@ -12,7 +12,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 import { RoiResultsChart } from "./components/RoiResultsChart";
 import { calculateRoi, formatCurrency, formatPercentage } from "./utils";
@@ -25,7 +24,6 @@ import { RoiFormData, CalculatedResults, ReportType } from "./types";
  * from implementing SalesWhisper based on their sales metrics.
  */
 const RoiCalculator = () => {
-  const { toast } = useToast();
   const [reportType, setReportType] = useState<ReportType>("average");
   const [results, setResults] = useState<CalculatedResults | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
@@ -98,18 +96,9 @@ const RoiCalculator = () => {
       // Validate email and send report
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(emailInput)) {
-        toast({
-          title: "Invalid email",
-          description: "Please enter a valid email address.",
-          variant: "destructive",
-        });
         return;
       }
       
-      toast({
-        title: "Report sent!",
-        description: `Your ROI report has been sent to ${emailInput}`,
-      });
       setShowEmailInput(false);
       setEmailInput("");
     } else {
@@ -160,10 +149,6 @@ const RoiCalculator = () => {
     // Save the PDF
     doc.save("SalesWhisper-ROI-Report.pdf");
     
-    toast({
-      title: "Report downloaded",
-      description: "Your ROI report has been downloaded successfully.",
-    });
   };
 
   return (
